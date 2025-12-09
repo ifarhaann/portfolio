@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ifarhan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <!-- Code Background -->
+    <div class="code-background"></div>
+    
+    <!-- Mobile Code Snippet Background -->
+    <div class="mobile-code-bg" id="mobile-code-bg"></div>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="nav-container">
+            <div class="left-nav">
+                <div class="logo">
+                    <span class="logo-text">_ifarhan</span>
+                </div>
+            </div>
+            <div class="right-nav">
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <button id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+                <button class="btn-download" onclick="downloadCV()">
+                    <i class="fas fa-download"></i> Resume
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-badge">
+                            <span class="badge-dot"></span>
+                            <span>Available for opportunities</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Building Digital Experiences
+                            <span class="title-highlight">That Matter</span>
+                        </h1>
+                        
+                        <!-- Typing Animation -->
+                        <div class="typing-container">
+                            <span class="static-text">I'm</span>
+                            <span class="dynamic-text-wrapper">
+                                <span class="dynamic-text" id="typing-text"></span>
+                                <span class="cursor">|</span>
+                            </span>
+                        </div>
+                        
+                        <p class="hero-subtitle">
+                            Hi, I'm <span class="name">Farhan Ali Bhat</span>, a passionate Full-Stack Engineer.
+                        </p>
+                        <p class="hero-description">
+                            I create fast, accessible, and responsive web applications with clean code and modern practices.
+                        </p>
+                        
+                        <div class="hero-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Srinagar, Jammu & Kashmir</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Computer Science Graduate</span>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-actions">
+                            <a href="#contact" class="btn-primary">
+                                <i class="fas fa-envelope"></i> Get in Touch
+                            </a>
+                            <a href="#projects" class="btn-secondary">
+                                <i class="fas fa-code"></i> View Projects
+                            </a>
+                        </div>
+                        
+                        <div class="hero-social">
+                            <a href="#" class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        <div class="image-wrapper">
+                            <div class="code-snippet">
+                                <pre><code class="language-javascript">
+// My Development Philosophy
+const develop = {
+    cleanCode: true,
+    bestPractices: true,
+    continuousLearning: true,
+    passion: "Creating impactful solutions"
+};
+
+function buildProject(idea) {
+    return transform(idea)
+        .withCleanArchitecture()
+        .withModernStack()
+        .withAttentionToDetail();
+}
+                                </code></pre>
+                            </div>
+                            <div class="profile-frame">
+                                <img src="meee.jpeg" 
+                                     alt="Farhan Ali Bhat" class="profile-img">
+                                <div class="profile-badge">
+                                    <i class="fas fa-code"></i>
+                                    <span>Full-Stack Engineer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-number">01.</span>
+                        About Me
+                    </h2>
+                    <p class="section-subtitle">Get to know the person behind the code</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I'm a self-taught developer who started my journey in 2023. What began as curiosity quickly turned into passion as I discovered the power of creating digital solutions that solve real problems.
+                        </p>
+                        
+                        <p>
+                            I believe in writing clean, maintainable code and following best practices. My approach combines technical expertise with creative problem-solving to build applications that are both functional and enjoyable to use.
+                        </p>
+                        
+                        <div class="about-stats">
+                            <div class="stat-card">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Projects Built</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">2+</div>
+                                <div class="stat-label">Years Learning</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">∞</div>
+                                <div class="stat-label">Passion for Code</div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="about-subtitle">Beyond Coding</h3>
+                        <div class="hobbies-grid">
+                            <div class="hobby-card">
+                                <div class="hobby-icon">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <div class="hobby-content">
+                                    <h4>Exploring Nature</h4>
+                                    <p>Finding inspiration in the mountains and valleys of Kashmir</p>
+                                </div>
+                            </div>
+                            <div class="hobby-card">
+                                <div class="hobby-icon">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <div class="hobby-content">
+                                    <h4>Islamic Studies</h4>
+                                    <p>Continuously learning and growing through Islamic teachings</p>
+                                </div>
+                            </div>
+                            <div class="hobby-card">
+                                <div class="hobby-icon">
+                                    <i class="fas fa-plane"></i>
+                                </div>
+                                <div class="hobby-content">
+                                    <h4>Travel & Culture</h4>
+                                    <p>Exploring new places and understanding different perspectives</p>
+                                </div>
+                            </div>
+                            <div class="hobby-card">
+                                <div class="hobby-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="hobby-content">
+                                    <h4>Learning New Skills</h4>
+                                    <p>Always curious about technology and personal development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image">
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-controls">
+                                    <span class="control close"></span>
+                                    <span class="control minimize"></span>
+                                    <span class="control maximize"></span>
+                                </div>
+                                <span class="terminal-title">about_farhan.js</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-line">
+                                    <span class="prompt">farhan@portfolio:~$</span>
+                                    <span class="command">cat journey.txt</span>
+                                </div>
+                                <div class="terminal-line output">
+                                    > 2023: Started coding journey
+                                </div>
+                                <div class="terminal-line output">
+                                    > Learned HTML, CSS, JavaScript
+                                </div>
+                                <div class="terminal-line output">
+                                    > Mastered React & Node.js
+                                </div>
+                                <div class="terminal-line output">
+                                    > Built 15+ projects
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="prompt">farhan@portfolio:~$</span>
+                                    <span class="command">npm list --depth=0</span>
+                                </div>
+                                <div class="terminal-line output">
+                                    > Passion for clean code ✓
+                                </div>
+                                <div class="terminal-line output">
+                                    > Love for problem-solving ✓
+                                </div>
+                                <div class="terminal-line output">
+                                    > Continuous learner ✓
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="prompt">farhan@portfolio:~$</span>
+                                    <span class="cursor">█</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-number">02.</span>
+                        Technical Skills
+                    </h2>
+                    <p class="section-subtitle">Tools and technologies I work with</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-code"></i>
+                            Frontend Development
+                        </h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h4>React.js</h4>
+                                    <p>Building interactive UIs with modern React</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h4>JavaScript (ES6+)</h4>
+                                    <p>Modern JavaScript features and patterns</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h4>HTML5 & CSS3</h4>
+                                    <p>Semantic markup and responsive design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-server"></i>
+                            Backend Development
+                        </h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-node-js"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h4>Node.js</h4>
+                                    <p>Server-side JavaScript runtime</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h4>MongoDB</h4>
+                                    <p>NoSQL database management</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h4>Express.js</h4>
+                                    <p>Web application framework</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-tools"></i>
+                            Tools & Others
+                        </h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-git-alt"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h4>Git & GitHub</h4>
+                                    <p>Version control and collaboration</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-terminal"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h4>REST APIs</h4>
+                                    <p>Designing and consuming APIs</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h4>Responsive Design</h4>
+                                    <p>Mobile-first development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-number">03.</span>
+                        Featured Projects
+                    </h2>
+                    <p class="section-subtitle">Some of my recent work</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                </div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="E-commerce Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>E-commerce Platform</h3>
+                            <p>A full-featured online store with user authentication, product management, and payment integration.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo not available yet
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-tech">
+                                    <span>Next.js</span>
+                                    <span>TypeScript</span>
+                                    <span>Tailwind</span>
+                                </div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Task Manager">
+                        </div>
+                        <div class="project-content">
+                            <h3>Task Management App</h3>
+                            <p>A productivity app with real-time collaboration, drag-drop functionality, and team features.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo not available yet
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-tech">
+                                    <span>React Native</span>
+                                    <span>Firebase</span>
+                                    <span>Redux</span>
+                                </div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Weather App">
+                        </div>
+                        <div class="project-content">
+                            <h3>Weather Application</h3>
+                            <p>A mobile app providing real-time weather updates with beautiful UI and location-based forecasts.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo not available yet
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-number">04.</span>
+                        Get In Touch
+                    </h2>
+                    <p class="section-subtitle">Let's build something amazing together</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>ifarhan.dev@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p>+91 ----------</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Location</h3>
+                                <p>Srinagar, Jammu & Kashmir</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-social">
+                            <h3>Connect with me</h3>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="Twitter">
+                                    <i class="fab fa-x-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">_ifarhan</span>
+                </div>
+                <p class="footer-text">
+                    Passionate about creating meaningful digital experiences through code
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="footer-social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="footer-social-link" aria-label="Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="#" class="footer-social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Farhan Ali Bhat. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> and <i class="fas fa-code"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sidebar Menu for Mobile -->
+    <div class="overlay" id="overlay"></div>
+    <div class="sidebar-menu" id="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-title">Menu</span>
+            <button class="sidebar-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#home" class="active">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="#about">
+                <i class="fas fa-user"></i> About
+            </a>
+            <a href="#skills">
+                <i class="fas fa-code"></i> Skills
+            </a>
+            <a href="#projects">
+                <i class="fas fa-project-diagram"></i> Projects
+            </a>
+            <a href="#contact">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+        </nav>
+        <button class="sidebar-download" onclick="downloadCV()">
+            <i class="fas fa-download"></i> Download Resume
+        </button>
+        <div class="sidebar-theme-toggle">
+            <span>Theme</span>
+            <button id="sidebarThemeToggle">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
